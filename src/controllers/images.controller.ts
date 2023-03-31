@@ -27,8 +27,6 @@ export const getImagesByTag = async (req: Request, res: Response) => {
     }
   })
 
-  console.log(req)
-
   xml2js.parseString(xmlData.data, (err: any, result: any) => {
     if (err) {
       return res.status(500).json({ status: false, statusCode: 500, message: 'failed to fetch data' })
